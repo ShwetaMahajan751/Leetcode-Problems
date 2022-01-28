@@ -1,0 +1,20 @@
+class Solution {
+public:
+    int maxCount(int m, int n, vector<vector<int>>& ops) {
+        
+        
+        int Row=INT_MAX,Col=INT_MAX;
+        
+        if(ops.empty())return m*n;
+        
+        for(auto i : ops){
+
+            Row=min(Row,i[0]);
+            Col=min(Col,i[1]);
+        
+        }
+        
+        return Col*Row;
+        
+    }
+};
